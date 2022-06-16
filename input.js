@@ -25,6 +25,15 @@ const setupInput = (conn) => {
     if (key === 'd') {
       conn.write("Move: right");
     }
+    if (key == 'j') {
+     conn.write("Say: I'm a slippery snake")
+    }
+    if (key == 'k') {
+     conn.write("Say: somebody stop me!")
+    }
+    if (key == 'l') {
+     conn.write("Say: GET OUT OF MY WAY")
+    }
   };
 
   stdin.on("data", handleUserInput);
