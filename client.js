@@ -5,10 +5,14 @@ const connect = function () {
   port: 50541,// PORT number here,
   host: "localhost", // IP address here,
  });
- 
+
  conn.on('connect', () => {
   console.log("Successfully connected to a game server");
-  conn.write("Name: TRE") //Add name to snake when connecting
+  conn.write("Name: TRE");
+  // conn.write("Move: up"); //add directions for moving snake when connected
+  // setInterval (() => {
+  //  conn.write("Move: left");
+  // }, 100)
  });
 
   
