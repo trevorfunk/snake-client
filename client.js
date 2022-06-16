@@ -6,10 +6,16 @@ const connect = function () {
   host: "localhost", // IP address here,
  });
  
- conn.on('data', (data) => {
-  console.log('you ded cuz you idled')
-})
+ conn.on('connect', () => {
+  console.log("Successfully connected to a game server");
+  conn.write("Name: TRE") //Add name to snake when connecting
+ });
 
+  
+ conn.on('data', () => {
+  console.log('you ded cuz you idled') //Message for connection lost 
+ })
+ 
  // interpret incoming data as text
  conn.setEncoding("utf8");
 
