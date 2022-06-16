@@ -9,10 +9,6 @@ const connect = function () {
  conn.on('connect', () => {
   console.log("Successfully connected to a game server");
   conn.write("Name: TRE");
-  // conn.write("Move: up"); //add directions for moving snake when connected
-  // setInterval (() => {
-  //  conn.write("Move: left");
-  // }, 100)
  });
 
   
