@@ -1,4 +1,5 @@
 const net = require("net");
+const { MESSAGES, MOVE_UP, MOVE_LEFT, MOVE_DOWN, MOVE_RIGHT } = require('./constants');
 
 let connection;
 
@@ -9,34 +10,28 @@ const setupInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  const handleUserInput = function(key) { //add key to terminate game
+  const handleUserInput = function(key) { //Movement and messages for user snake
     if (key === '\u0003') {
       process.exit();
     }
-    if (key === 'w') {
+    if (key === MOVE_UP) {
       conn.write("Move: up");
     }
-    if (key === 'a') {
+    if (key === MOVE_LEFT) {
       conn.write("Move: left");
     }
-    if (key === 's') {
+    if (key === MOVE_DOWN) {
       conn.write("Move: down");
     }
-    if (key === 'd') {
+    if (key === MOVE_RIGHT) {
       conn.write("Move: right");
     }
-    if (key == 'j') {
-     conn.write("Say: I'm a slippery snake")
-    }
-    if (key == 'k') {
-     conn.write("Say: somebody stop me!")
-    }
-    if (key == 'l') {
-     conn.write("Say: GET OUT OF MY WAY")
+    if (MESSAGES[key]) {
+      conn.write(MESSAGES[key]);
     }
   };
 
-  stdin.on("data", handleUserInput);
+  stdin.on("data", (handleUserInput));
   return stdin;
 };
 
