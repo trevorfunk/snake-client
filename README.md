@@ -6,14 +6,6 @@ This is simply a multiplayer take on the genre.
 
 Before you can run this client, you will need to be running the server side which you can download and install from here. 
 
-## Final Product
-
-![![snake1](https://user-images.githubusercontent.com/67843099/174499336-36bf0efa-59f2-4e6d-a7fb-5b8c33a58f26.png)
-]((https://user-images.githubusercontent.com/67843099/174499336-36bf0efa-59f2-4e6d-a7fb-5b8c33a58f26.png)
-)
-!["screenshot description"](#)
-
-
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side
