@@ -9,7 +9,8 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 ![![snake1](https://user-images.githubusercontent.com/67843099/174499336-36bf0efa-59f2-4e6d-a7fb-5b8c33a58f26.png)
-](#)
+]((https://user-images.githubusercontent.com/67843099/174499336-36bf0efa-59f2-4e6d-a7fb-5b8c33a58f26.png)
+)
 !["screenshot description"](#)
 
 
